@@ -44,7 +44,7 @@ const themeConfig = {
       },
       h2: {
         fontFamily: "Lora",
-        fontSize: 34,
+        fontSize: 32,
         lineHeight: 37.4,
         fontWeight: 400,
       },

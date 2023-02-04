@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { Drawer, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./all.sass";
@@ -8,6 +8,7 @@ import useSiteMetadata from "./SiteMetadata";
 import { Link, withPrefix } from "gatsby";
 import themeConfig from "./themeConfig";
 import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -62,13 +63,9 @@ const TemplateWrapper = ({ children }) => {
             content={`${withPrefix("/")}img/og-image.jpg`}
           />
         </Helmet>
-        <Drawer
-          opened={isActive}
-          onClose={() => setIsActive(false)}
-          zIndex={1500}
-        >
+        <MobileMenu isOpened={isActive} onClose={() => setIsActive(false)}>
           {menu}
-        </Drawer>
+        </MobileMenu>
         <Navbar onBurgerClick={() => setIsActive(true)} />
         <div>{children}</div>
         <Footer />

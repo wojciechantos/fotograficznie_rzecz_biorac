@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Navbar as NavbarBase, Drawer } from "@mantine/core";
+import { Header, Navbar as NavbarBase } from "@mantine/core";
 import { Link } from "gatsby";
 import { Flex } from "@mantine/core";
 import { Container } from "./Container";
@@ -24,10 +24,10 @@ const Navbar = ({ onBurgerClick }) => {
         <Container>
           <NavbarBase>
             {/*<div className="navbar-brand">*/}
-            <Link to="/" className="navbar-item" title="Logo">
+            <Link to="/" title="Logo">
               <img
                 src={logo}
-                alt="Kaldi"
+                alt="Fotograficznie-Rzecz-Biorąc"
                 style={{ width: "104px", height: "79px" }}
               />
             </Link>
@@ -36,11 +36,7 @@ const Navbar = ({ onBurgerClick }) => {
               className={`navbar-burger burger ${isActive && "is-active"}`}
               aria-expanded={isActive}
               onClick={onBurgerClick}
-            >
-              <span />
-              <span />
-              <span />
-            </button>
+            ></button>
             {/*</div>*/}
             {/*<ul*/}
             {/*  id="navMenu"*/}
