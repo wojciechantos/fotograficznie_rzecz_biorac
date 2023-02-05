@@ -1,9 +1,12 @@
 ---
 templateKey: index-page
-title: kqjefbqjbwfojbqwf
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Najlepsi fotografowie w Twoich głośnikach
+image: https://www.figma.com/file/Nx1ZhploDRdkMG0ZeCrXhZ/Szymon-Kasolik---projekt-ko%C5%84cowy-(Copy)?node-id=156%3A925&t=PQaCpnkVJ0yOSkvu-4
+heading: Nazywam się Szymon Kasolik i podobnie jak Ty -  jestem fotografem.
+subheading: Jeżeli szukasz inspiracji dla swojej fotografii, to trafiłeś w dobre
+  miejsce! Przed Tobą ponad 100 odcinków z najlepszymi fotografami w
+  Polsce.  Kochasz krajobraz? Portret? Reportaż? A może po prostu chcesz
+  posłuchać o tym, co jest Twoim życiem, czyli fotografii? Rozgość się!
 mainpitch:
   title: Why Kaldi
   description: >
