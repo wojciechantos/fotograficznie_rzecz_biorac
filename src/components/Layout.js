@@ -2,24 +2,22 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import { MantineProvider } from "@mantine/core";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import { Navbar } from "./Navbar";
+import { MobileMenu } from "./MobileMenu";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { Link, withPrefix } from "gatsby";
 import themeConfig from "./themeConfig";
 import { useState } from "react";
-import MobileMenu from "./MobileMenu";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   const [isActive, setIsActive] = useState(false);
 
-  const menu = () => {
-    return (
-      <Link className="navbar-item" to="/about">
-        About
-      </Link>
-    );
+  const toggleMobileMenu = () => {
+    if (isActive) {
+      setIsActive(false);
+    } else setIsActive(true);
   };
 
   return (
@@ -63,10 +61,8 @@ const TemplateWrapper = ({ children }) => {
             content={`${withPrefix("/")}img/og-image.jpg`}
           />
         </Helmet>
-        <MobileMenu isOpened={isActive} onClose={() => setIsActive(false)}>
-          {menu}
-        </MobileMenu>
-        <Navbar onBurgerClick={() => setIsActive(true)} />
+        <MobileMenu isOpened={isActive} onClose={toggleMobileMenu} />
+        <Navbar onBurgerClick={toggleMobileMenu} />
         <div>{children}</div>
         <Footer />
       </MantineProvider>
