@@ -1,3 +1,5 @@
+// noinspection GraphQLUnresolvedReference
+
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
@@ -7,10 +9,9 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
-import { GatsbyImage } from "gatsby-plugin-image";
 import { Display, Heading, Text } from "../components/Typography";
 import { SectionWrapper } from "../components/SectionWrapper";
-import { Flex } from "@mantine/core";
+import { Flex, Image } from "@mantine/core";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -29,37 +30,37 @@ export const IndexPageTemplate = ({
       <SectionWrapper>
         <Flex>
           <Flex direction="column">
-            <Display color="brand">{mainpitch.title}</Display>
-            <Heading level={1}>{mainpitch.description}</Heading>
-            <Heading level={2}>{heading}</Heading>
-            <Text>{subheading}</Text>
+            <Display color="brand">{title}</Display>
+            <Heading level={2} color="brand">
+              {heading}
+            </Heading>
+            <Text color="brand">{subheading}</Text>
+            {/*<Text>{subheading}</Text>*/}
+            <Text level={1}>{mainpitch.description}</Text>
+            <Text color="brand">{mainpitch.title}</Text>
           </Flex>
           {/*<Flex>*/}
-          <GatsbyImage
-            alt="hero-image"
-            image={heroImage}
-            style={{ width: "100%" }}
-          />
+          <Image alt="hero-image" image={heroImage} style={{ width: "100%" }} />
           {/*</Flex>*/}
         </Flex>
       </SectionWrapper>
-      {/*<Features gridItems={intro.blurbs} />*/}
-      {/*<div className="columns">*/}
-      {/*  <div className="column is-12 has-text-centered">*/}
-      {/*    <Link className="btn" to="/products">*/}
-      {/*      See all products*/}
-      {/*    </Link>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-      {/*<div className="column is-12">*/}
-      {/*  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>*/}
-      {/*  <BlogRoll />*/}
-      {/*  <div className="column is-12 has-text-centered">*/}
-      {/*    <Link className="btn" to="/blog">*/}
-      {/*      Read more*/}
-      {/*    </Link>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <Features gridItems={intro.blurbs} />
+      <div className="columns">
+        <div className="column is-12 has-text-centered">
+          <Link className="btn" to="/products">
+            See all products
+          </Link>
+        </div>
+      </div>
+      <div className="column is-12">
+        <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
+        <BlogRoll />
+        <div className="column is-12 has-text-centered">
+          <Link className="btn" to="/blog">
+            Read more
+          </Link>
+        </div>
+      </div>
     </PageContainer>
   );
 };

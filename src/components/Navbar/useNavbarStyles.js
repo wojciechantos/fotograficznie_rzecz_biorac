@@ -7,6 +7,7 @@ export const useNavbarStyles = createStyles((theme) => ({
     position: "fixed",
     zIndex: 1,
     height: NAVBAR_HEIGHT,
+    backgroundColor: "transparent",
 
     [theme.fn.smallerThan("sm")]: {
       height: "auto",

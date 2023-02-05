@@ -64,7 +64,7 @@ const TemplateWrapper = ({ children }) => {
         <MobileMenu isOpened={isActive} onClose={toggleMobileMenu} />
         <Navbar onBurgerClick={toggleMobileMenu} />
         <div>{children}</div>
-        <Footer />
+        {/*<Footer />*/}
       </MantineProvider>
     </div>
   );
