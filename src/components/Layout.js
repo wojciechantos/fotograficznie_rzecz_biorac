@@ -9,6 +9,7 @@ import useSiteMetadata from "./SiteMetadata";
 import { Link, withPrefix } from "gatsby";
 import themeConfig from "./themeConfig";
 import { useState } from "react";
+import GlobalStyles from "./GlobalStyles";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -61,9 +62,10 @@ const TemplateWrapper = ({ children }) => {
             content={`${withPrefix("/")}img/og-image.jpg`}
           />
         </Helmet>
+        <GlobalStyles />
         <MobileMenu isOpened={isActive} onClose={toggleMobileMenu} />
         <Navbar onBurgerClick={toggleMobileMenu} />
-        <div>{children}</div>
+        {children}
         {/*<Footer />*/}
       </MantineProvider>
     </div>

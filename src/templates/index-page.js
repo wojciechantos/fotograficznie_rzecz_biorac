@@ -25,6 +25,8 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
+  console.log(image);
+
   return (
     <PageContainer>
       <SectionWrapper>
