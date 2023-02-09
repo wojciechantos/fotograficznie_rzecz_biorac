@@ -21,9 +21,9 @@ const themeConfig = {
     xl: 24,
     xxl: 28,
   },
-  fontFamily: "Lora, Helvetica, sans-serif",
+  fontFamily: "Lora",
   headings: {
-    fontFamily: "Lora, Helvetica, sans-serif",
+    fontFamily: "Lora",
     sizes: {
       h1: {
         fontFamily: "Lora",

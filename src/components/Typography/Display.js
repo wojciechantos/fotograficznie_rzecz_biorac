@@ -7,11 +7,11 @@ import { fontColorsMap } from "./fontColorsMap";
 const useStyles = createStyles((theme) => ({
   display: {
     fontSize: "60px",
-    lineHeight: "58.8px",
+    lineHeight: "98%",
+    letterSpacing: "-0.02em",
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: "48px",
-      lineHeight: "47px",
     },
   },
 }));
@@ -41,5 +41,5 @@ Display.propTypes = {
 Display.defaultProps = {
   children: "",
   color: "black",
-  italic: true,
+  italic: false,
 };

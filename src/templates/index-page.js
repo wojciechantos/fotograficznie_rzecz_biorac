@@ -9,44 +9,61 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Display, Heading, Text } from "../components/Typography";
 import { SectionWrapper } from "../components/SectionWrapper";
+import { AppButton } from "../components/AppButton";
 import { Flex, Image } from "@mantine/core";
+import { indexPageData } from "../../static/pageData/index/pageData";
+// import heroImage from "../img/heroImage.png";
+
+/* Styles imports */
+import { useIndexPageStyles } from "../styles/index";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  // title,
+  // heading,
+  // subheading,
+  // mainpitch,
+  // description,
+  // intro,
 }) => {
   const heroImage = getImage(image) || image;
 
-  console.log(image);
+  const {
+    hero: { display, heading, description, heroButton },
+  } = indexPageData;
+
+  const {
+    classes: { sectionWrapper, heroWrapper, headersWrapper },
+  } = useIndexPageStyles();
 
   return (
     <PageContainer>
-      <SectionWrapper>
-        <Flex>
-          <Flex direction="column">
-            <Display color="brand">{title}</Display>
-            <Heading level={2} color="brand">
+      <SectionWrapper className={sectionWrapper}>
+        <Flex className={heroWrapper}>
+          <Flex className={headersWrapper}>
+            <Display color="brand" mb={32}>
+              {display}
+            </Display>
+            <Heading level={2} color="brand" mb={32}>
               {heading}
             </Heading>
-            <Text color="brand">{subheading}</Text>
-            {/*<Text>{subheading}</Text>*/}
-            <Text level={1}>{mainpitch.description}</Text>
-            <Text color="brand">{mainpitch.title}</Text>
+            <Text color="brand">{description}</Text>
+            <AppButton variant="creamy">Zacznij słuchać</AppButton>
           </Flex>
           {/*<Flex>*/}
-          <Image alt="hero-image" image={heroImage} style={{ width: "100%" }} />
+          <GatsbyImage
+            alt="hero-image"
+            image={heroImage}
+            style={{ width: "100%" }}
+          />
           {/*</Flex>*/}
         </Flex>
       </SectionWrapper>
-      <Features gridItems={intro.blurbs} />
+      {/*<Features gridItems={intro.blurbs} />*/}
       <div className="columns">
         <div className="column is-12 has-text-centered">
           <Link className="btn" to="/products">
