@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mantine/core";
 
-export const SectionWrapper = ({ children, height, className }) => {
+export const SectionWrapper = ({ children, className }) => {
   return (
     <Box
       component="section"

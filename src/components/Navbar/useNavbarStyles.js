@@ -2,12 +2,12 @@ import { createStyles } from "@mantine/core";
 
 const NAVBAR_HEIGHT = "160px";
 
-export const useNavbarStyles = createStyles((theme) => ({
+export const useNavbarStyles = createStyles((theme, { scrollPosition }) => ({
   root: {
     position: "fixed",
     zIndex: 1,
     height: NAVBAR_HEIGHT,
-    backgroundColor: "transparent",
+    transition: "background-color 0.2s ease",
 
     [theme.fn.smallerThan("sm")]: {
       height: "auto",

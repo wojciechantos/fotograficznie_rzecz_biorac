@@ -3,7 +3,7 @@ import { Container } from "@mantine/core";
 
 export const PageContainer = ({ children }) => {
   return (
-    <Container size="xl" px="md">
+    <Container px={0} size="xl">
       {children}
     </Container>
   );

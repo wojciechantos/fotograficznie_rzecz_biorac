@@ -1,25 +1,30 @@
 import { createStyles } from "@mantine/core";
 
-export const useIndexPageStyles = createStyles((theme) => ({
-  sectionWrapper: {
-    height: "200vh",
-    paddingTop: theme.spacing.xxl,
-
-    [theme.fn.largerThan("md")]: {
-      height: "100vh",
-    },
+export const useStyles = createStyles((theme) => ({
+  contentWrapper: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
-  heroWrapper: {
+  buttonsGroupWrapper: {
     width: "100%",
-    height: "100%",
-    alignItems: "flex-start",
+    alignItems: "center",
     flexDirection: "column",
+    justifyContent: "center",
 
     [theme.fn.largerThan("md")]: {
       alignItems: "center",
       flexDirection: "row",
-      justifyContent: "space-between",
+      justifyContent: "center",
+    },
+  },
+
+  buttonsWrapper: {
+    flexDirection: "column",
+
+    [theme.fn.largerThan(382)]: {
+      flexDirection: "row",
     },
   },
 

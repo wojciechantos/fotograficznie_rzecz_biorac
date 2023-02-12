@@ -13,24 +13,3 @@ export const replaceRenderer = ({
   setHeadComponents([<ServerStyles html={html} server={stylesServer} />]);
   replaceBodyHTMLString(html);
 };
-
-export const onRenderBody = ({ setHeadComponents }) => {
-  setHeadComponents([
-    <link
-      rel="preload"
-      href="/fonts/Lora-Regular.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Lora-Italic.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-  ]);
-};

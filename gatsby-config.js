@@ -8,6 +8,22 @@ module.exports = {
     `gatsby-plugin-jss`,
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Lora`,
+            file: `'https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap'`,
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-sass",
       options: {
         sassOptions: {

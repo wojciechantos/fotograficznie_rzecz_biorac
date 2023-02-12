@@ -1,86 +1,51 @@
 // noinspection GraphQLUnresolvedReference
-
+import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 import { PageContainer } from "../components/PageContainer";
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
-import { StaticImage } from "gatsby-plugin-image";
-import { Display, Heading, Text } from "../components/Typography";
-import { SectionWrapper } from "../components/SectionWrapper";
-import { AppButton } from "../components/Buttons";
-import { Flex } from "@mantine/core";
-import { indexPageData } from "../../static/pageData/index/pageData";
 
-/* Styles imports */
-import { useIndexPageStyles } from "../styles/index";
+/*
+ * Page sections import
+ * */
+import { HeroHeader, NewestEpisode } from "../templates/indexPageContent";
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({
-  image,
-  // title,
-  // heading,
-  // subheading,
-  // mainpitch,
-  // description,
-  // intro,
-}) => {
-  const image = {
-    url: "../img/m_heroImage.png",
-  };
-
-  const {
-    hero: { display, heading, description, heroButton },
-  } = indexPageData;
-
-  const {
-    classes: { sectionWrapper, heroWrapper, headersWrapper },
-  } = useIndexPageStyles();
-
+export const IndexPageTemplate = (
+  {
+    // image,
+    // title,
+    // heading,
+    // subheading,
+    // mainpitch,
+    // description,
+    // intro,
+  }
+) => {
   return (
     <PageContainer>
-      <SectionWrapper className={sectionWrapper}>
-        <Flex className={heroWrapper}>
-          <Flex className={headersWrapper}>
-            <Display color="brand" mb={32}>
-              {display}
-            </Display>
-            <Heading level={2} color="brand" mb={32}>
-              {heading}
-            </Heading>
-            <Text color="brand" mb={32}>
-              {description}
-            </Text>
-            <AppButton>{heroButton}</AppButton>
-          </Flex>
-          <StaticImage
-            alt="hero-image"
-            src="../img/m_heroImage.png"
-            style={{ width: "100%" }}
-          />
-        </Flex>
-      </SectionWrapper>
+      <HeroHeader />
+      <NewestEpisode />
+
       {/*<Features gridItems={intro.blurbs} />*/}
-      <div className="columns">
-        <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/products">
-            See all products
-          </Link>
-        </div>
-      </div>
-      <div className="column is-12">
-        <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
-        <BlogRoll />
-        <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/blog">
-            Read more
-          </Link>
-        </div>
-      </div>
+      {/*<div className="columns">*/}
+      {/*  <div className="column is-12 has-text-centered">*/}
+      {/*    <Link className="btn" to="/products">*/}
+      {/*      See all products*/}
+      {/*    </Link>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
+      {/*<div className="column is-12">*/}
+      {/*  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>*/}
+      {/*  <BlogRoll />*/}
+      {/*  <div className="column is-12 has-text-centered">*/}
+      {/*    <Link className="btn" to="/blog">*/}
+      {/*      Read more*/}
+      {/*    </Link>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </PageContainer>
   );
 };
@@ -125,36 +90,28 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-// export const pageQuery = graphql`
-//   query IndexPageTemplate {
-//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-//       frontmatter {
-//         title
-//         image {
-//           childImageSharp {
-//             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-//           }
-//         }
-//         heading
-//         subheading
-//         mainpitch {
-//           title
-//           description
-//         }
-//         description
-//         intro {
-//           blurbs {
-//             image {
-//               childImageSharp {
-//                 gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-//               }
-//             }
-//             text
-//           }
-//           heading
-//           description
-//         }
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        title
+        image
+        heading
+        subheading
+        mainpitch {
+          title
+          description
+        }
+        description
+        intro {
+          blurbs {
+            image
+            text
+          }
+          heading
+          description
+        }
+      }
+    }
+  }
+`;

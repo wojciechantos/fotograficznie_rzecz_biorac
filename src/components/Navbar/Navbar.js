@@ -6,9 +6,13 @@ import logo from "../../img/logo.png";
 import { Menu, Search } from "react-feather";
 import { Text } from "../Typography";
 import PropTypes from "prop-types";
+import { useWindowScroll } from "@mantine/hooks";
+import themeConfig from "../themeConfig";
 
 export const Navbar = ({ onBurgerClick }) => {
-  const { classes } = useNavbarStyles();
+  const [scroll] = useWindowScroll();
+
+  const { classes } = useNavbarStyles(scroll.y);
 
   const menu = (
     <>
@@ -32,7 +36,12 @@ export const Navbar = ({ onBurgerClick }) => {
 
   return (
     <>
-      <Header withBorder={false} className={classes.root} py="md">
+      <Header
+        withBorder={false}
+        className={classes.root}
+        py="md"
+        bg={scroll.y === 0 ? "transparent" : "backgroundColor.0"}
+      >
         <Container className={classes.header} size="xl" px="md">
           <Box component={Link} to="/" title="Logo" className={classes.logo}>
             <img

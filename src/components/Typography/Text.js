@@ -19,7 +19,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 400,
     textAlign: "center",
     textTransform: "uppercase",
-    letterSpacing: "40%",
+    letterSpacing: "0.4em",
   },
 
   button: {

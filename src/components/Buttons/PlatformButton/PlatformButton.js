@@ -6,12 +6,19 @@ import { ChildrenType } from "../../Types";
 
 const useStyles = createStyles((theme) => ({
   platform: {
-    padding: `${theme.spacing.xl}px 42px`,
+    padding: `${theme.spacing.xl}px ${theme.spacing.sm}px`,
+
     backgroundColor: theme.black,
     color: "white",
     border: `1px solid ${theme.black}`,
     transition: "all 0.3s",
     overflow: "hidden",
+    width: "170px",
+
+    [theme.fn.largerThan("md")]: {
+      padding: `${theme.spacing.xl}px`,
+      width: "210px",
+    },
 
     p: {
       transition: "transform 0.2s linear",
