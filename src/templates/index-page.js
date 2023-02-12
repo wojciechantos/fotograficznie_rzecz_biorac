@@ -9,13 +9,12 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import { Display, Heading, Text } from "../components/Typography";
 import { SectionWrapper } from "../components/SectionWrapper";
-import { AppButton } from "../components/AppButton";
-import { Flex, Image } from "@mantine/core";
+import { AppButton } from "../components/Buttons";
+import { Flex } from "@mantine/core";
 import { indexPageData } from "../../static/pageData/index/pageData";
-// import heroImage from "../img/heroImage.png";
 
 /* Styles imports */
 import { useIndexPageStyles } from "../styles/index";
@@ -30,7 +29,9 @@ export const IndexPageTemplate = ({
   // description,
   // intro,
 }) => {
-  const heroImage = getImage(image) || image;
+  const image = {
+    url: "../img/m_heroImage.png",
+  };
 
   const {
     hero: { display, heading, description, heroButton },
@@ -51,16 +52,16 @@ export const IndexPageTemplate = ({
             <Heading level={2} color="brand" mb={32}>
               {heading}
             </Heading>
-            <Text color="brand">{description}</Text>
-            <AppButton variant="creamy">Zacznij słuchać</AppButton>
+            <Text color="brand" mb={32}>
+              {description}
+            </Text>
+            <AppButton>{heroButton}</AppButton>
           </Flex>
-          {/*<Flex>*/}
-          <GatsbyImage
+          <StaticImage
             alt="hero-image"
-            image={heroImage}
+            src="../img/m_heroImage.png"
             style={{ width: "100%" }}
           />
-          {/*</Flex>*/}
         </Flex>
       </SectionWrapper>
       {/*<Features gridItems={intro.blurbs} />*/}
@@ -124,36 +125,36 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query IndexPageTemplate {
+//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+//       frontmatter {
+//         title
+//         image {
+//           childImageSharp {
+//             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+//           }
+//         }
+//         heading
+//         subheading
+//         mainpitch {
+//           title
+//           description
+//         }
+//         description
+//         intro {
+//           blurbs {
+//             image {
+//               childImageSharp {
+//                 gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+//               }
+//             }
+//             text
+//           }
+//           heading
+//           description
+//         }
+//       }
+//     }
+//   }
+// `;

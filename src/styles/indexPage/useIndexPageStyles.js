@@ -3,6 +3,7 @@ import { createStyles } from "@mantine/core";
 export const useIndexPageStyles = createStyles((theme) => ({
   sectionWrapper: {
     height: "200vh",
+    paddingTop: theme.spacing.xxl,
 
     [theme.fn.largerThan("md")]: {
       height: "100vh",
@@ -39,7 +40,7 @@ export const useIndexPageStyles = createStyles((theme) => ({
       paddingBottom: 0,
       justifyContent: "space-between",
       height: "auto",
-      alignItems: "flex-end",
+      alignItems: "flex-start",
     },
   },
 }));
