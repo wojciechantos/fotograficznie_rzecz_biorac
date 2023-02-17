@@ -43,14 +43,21 @@ export const NewestEpisode = () => {
         <Flex className={buttonsGroupWrapper} gap="xl" mb={96}>
           <Flex className={buttonsWrapper} gap="xl">
             <PlatformButton>{appleButton}</PlatformButton>
-            <PlatformButton>{spotifyButton}</PlatformButton>
+            <PlatformButton link="https://open.spotify.com/show/2vHPUNoBRp4jY4jsSYriH8">
+              {spotifyButton}
+            </PlatformButton>
           </Flex>
           <Flex className={buttonsWrapper} gap="xl">
             <PlatformButton>{googleButton}</PlatformButton>
             <PlatformButton>{soundcloudButton}</PlatformButton>
           </Flex>
         </Flex>
-        <EpisodeFrame />
+        <EpisodeFrame
+          caption="najnowszy odcinek"
+          title="Wiktor Franko"
+          moreText="Zobacz ten odcinek"
+          size="fullWidth"
+        />
       </Flex>
     </SectionWrapper>
   );

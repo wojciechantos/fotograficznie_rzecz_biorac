@@ -5,12 +5,17 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { PageContainer } from "../components/PageContainer";
 import Layout from "../components/Layout";
+import Footer from "../containers/Footer";
 import BlogRoll from "../components/BlogRoll";
 
 /*
  * Page sections import
  * */
-import { HeroHeader, NewestEpisode } from "../templates/indexPageContent";
+import {
+  HeroHeader,
+  NewestEpisode,
+  Episodes,
+} from "../templates/indexPageContent";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = (
@@ -25,28 +30,32 @@ export const IndexPageTemplate = (
   }
 ) => {
   return (
-    <PageContainer>
-      <HeroHeader />
-      <NewestEpisode />
+    <>
+      <PageContainer>
+        <HeroHeader />
+        <NewestEpisode />
+        <Episodes />
 
-      {/*<Features gridItems={intro.blurbs} />*/}
-      {/*<div className="columns">*/}
-      {/*  <div className="column is-12 has-text-centered">*/}
-      {/*    <Link className="btn" to="/products">*/}
-      {/*      See all products*/}
-      {/*    </Link>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-      {/*<div className="column is-12">*/}
-      {/*  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>*/}
-      {/*  <BlogRoll />*/}
-      {/*  <div className="column is-12 has-text-centered">*/}
-      {/*    <Link className="btn" to="/blog">*/}
-      {/*      Read more*/}
-      {/*    </Link>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-    </PageContainer>
+        {/*<Features gridItems={intro.blurbs} />*/}
+        {/*<div className="columns">*/}
+        {/*  <div className="column is-12 has-text-centered">*/}
+        {/*    <Link className="btn" to="/products">*/}
+        {/*      See all products*/}
+        {/*    </Link>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        {/*<div className="column is-12">*/}
+        {/*  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>*/}
+        {/*  <BlogRoll />*/}
+        {/*  <div className="column is-12 has-text-centered">*/}
+        {/*    <Link className="btn" to="/blog">*/}
+        {/*      Read more*/}
+        {/*    </Link>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+      </PageContainer>
+      <Footer />
+    </>
   );
 };
 

@@ -15,4 +15,8 @@ export const indexPageData = {
     googleButton: "Google Podcasts",
     soundcloudButton: "Soundcloud",
   },
+  episodes: {
+    heading: "Pozostałe podcasty",
+    watchAllButton: "Zobacz wszystkie",
+  },
 };

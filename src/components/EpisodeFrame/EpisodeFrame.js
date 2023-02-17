@@ -1,38 +1,44 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Heading, Text } from "../Typography";
+import { MoreButton } from "../Buttons";
 import { Flex } from "@mantine/core";
 import { useStyles } from "./useStyles";
+import { Link } from "gatsby";
 
-export const EpisodeFrame = ({ image, size }) => {
+export const EpisodeFrame = ({
+  image,
+  size,
+  link,
+  caption,
+  title,
+  moreText,
+}) => {
   const {
-    classes: {
-      frameWrapper,
-      innerWrapper,
-      buttonsGroupWrapper,
-      episodeWrapper,
-    },
+    classes: { fullFrameWrapper, frameWrapper, innerWrapper },
   } = useStyles();
 
   return (
-    <Flex w="100%" h={515} className={frameWrapper}>
-      <StaticImage
-        src="../../../static/img/indexPage/episodePhoto.png"
-        alt="episode"
-        style={{ position: "absolute", height: "515px" }}
-      />
-      <Flex p={40} className={innerWrapper}>
-        <Text variant="caption" color="white">
-          Najnowszy odcinek
-        </Text>
+    <Flex className={size === "fullWidth" ? fullFrameWrapper : frameWrapper}>
+      <Link to={link} style={{ width: "100%" }}>
+        <StaticImage
+          src="../../../static/img/indexPage/episodePhoto.png"
+          alt="episode"
+        />
 
-        <Flex direction="column">
-          <Heading level={3} color="white">
-            Wiktor Franko{" "}
-          </Heading>
-          <Text color="white">Zobacz ten odcinek </Text>
+        <Flex className={innerWrapper}>
+          <Text variant="caption" color="white">
+            {caption}
+          </Text>
+
+          <Flex direction="column">
+            <Heading level={3} color="white" pb="xs">
+              {title}
+            </Heading>
+            <MoreButton>{moreText}</MoreButton>
+          </Flex>
         </Flex>
-      </Flex>
+      </Link>
     </Flex>
   );
 };

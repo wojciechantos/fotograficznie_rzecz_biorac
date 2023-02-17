@@ -58,7 +58,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const PlatformButton = ({ children, ...rest }) => {
+export const PlatformButton = ({ children, link, ...rest }) => {
   const { classes, cx } = useStyles();
   const { classes: buttonBaseClasses } = useButtonBaseStyles();
 
@@ -75,8 +75,10 @@ export const PlatformButton = ({ children, ...rest }) => {
 
 PlatformButton.propTypes = {
   children: ChildrenType,
+  link: ChildrenType,
 };
 
 PlatformButton.defaultProps = {
   children: "",
+  link: "",
 };
