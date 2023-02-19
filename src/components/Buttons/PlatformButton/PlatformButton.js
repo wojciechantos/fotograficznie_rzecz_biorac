@@ -1,7 +1,6 @@
 import React from "react";
 import { UnstyledButton, createStyles } from "@mantine/core";
 import { useButtonBaseStyles } from "../useButtonBaseStyles";
-import PropTypes from "prop-types";
 import { ChildrenType } from "../../Types";
 
 const useStyles = createStyles((theme) => ({

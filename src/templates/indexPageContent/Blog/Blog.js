@@ -9,36 +9,24 @@ import { indexPageData } from "../pageData";
 import { useStyles } from "./useStyles";
 
 // eslint-disable-next-line
-export const Episodes = () => {
-  const episodesMock = [
-    {
-      id: 6,
-      title: "Hashtag Alek",
-    },
-    {
-      id: 5,
-      title: "Wojtek Grzędziński",
-    },
-    {
-      id: 4,
-      title: "Andrzej Dragan",
-    },
+export const Blog = () => {
+  const blogsMock = [
     {
       id: 3,
-      title: "Patryk Romańczuk",
+      title: "Długi czas naświetlania - co musisz wiedzieć",
     },
     {
       id: 2,
-      title: "Mateusz Dąbrowski",
+      title: "Checklista - co zabrać na fotografowanie w górach",
     },
     {
       id: 1,
-      title: "Paweł Jagiełło",
+      title: "Spacer po lesie w zwyczajny dzień",
     },
   ];
 
   const {
-    episodes: { heading, watchAllButton },
+    blog: { heading, watchAllButton },
   } = indexPageData;
 
   const {
@@ -58,16 +46,15 @@ export const Episodes = () => {
           spacing="lg"
           breakpoints={[
             { maxWidth: "lg", cols: 3, spacing: "lg" },
-            { maxWidth: "md", cols: 2, spacing: "md" },
             { maxWidth: "sm", cols: 1, spacing: "md" },
           ]}
         >
-          {episodesMock.map((episode) => (
+          {blogsMock.map((episode) => (
             <EpisodeFrame
               key={episode.id}
-              caption={`#${episode.id}`}
               title={episode.title}
-              moreText="Zobacz ten odcinek"
+              moreText="Czytaj więcej"
+              withBlogFrame
             />
           ))}
         </SimpleGrid>

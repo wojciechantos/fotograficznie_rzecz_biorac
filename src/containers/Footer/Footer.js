@@ -75,7 +75,7 @@ const Footer = () => {
               style={{ width: "32px", height: "32px" }}
             />
           </a>
-          {/*TODO: Set propper email with mailto:*/}
+          {/*TODO: Set propper email with mailto:?*/}
           <a title="email" href="">
             <img
               src={at}

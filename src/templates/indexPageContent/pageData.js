@@ -19,4 +19,13 @@ export const indexPageData = {
     heading: "Pozostałe podcasty",
     watchAllButton: "Zobacz wszystkie",
   },
+  bestOf: {
+    quote: "Analog. No make up. Hate Photoshop.",
+    author: "Paweł Brzeziński",
+    moreButton: "Zobacz ten odcinek",
+  },
+  blog: {
+    heading: "Blog",
+    watchAllButton: "Zobacz wszystkie posty",
+  },
 };

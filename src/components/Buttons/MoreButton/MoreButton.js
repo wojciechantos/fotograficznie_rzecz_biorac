@@ -25,12 +25,20 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     transition: "all 0.3s",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
+
+    a: {
+      color: "inherit",
+    },
 
     "&:hover": {
       paddingLeft: theme.spacing.md,
       [`.${getRef("icon")}`]: {
         transform: "scale(1.25, 1)",
+      },
+
+      a: {
+        color: "inherit",
       },
     },
   },
@@ -42,6 +50,10 @@ const useStyles = createStyles((theme, _params, getRef) => ({
         fill: "white",
       },
     },
+
+    a: {
+      color: "inherit",
+    },
   },
 
   dark: {
@@ -51,6 +63,10 @@ const useStyles = createStyles((theme, _params, getRef) => ({
         fill: theme.colors.violet[2],
       },
     },
+
+    a: {
+      color: "inherit",
+    },
   },
 }));
 
@@ -58,12 +74,12 @@ export const MoreButton = ({ children, link, variant, ...rest }) => {
   const { classes, cx } = useStyles();
 
   return (
-    <Link to={link}>
-      <UnstyledButton className={cx(classes.more, classes[variant])} {...rest}>
+    <UnstyledButton className={cx(classes.more, classes[variant])} {...rest}>
+      <Link to={link}>
         {children}
         <ArrowIcon className={classes.icon} />
-      </UnstyledButton>
-    </Link>
+      </Link>
+    </UnstyledButton>
   );
 };
 

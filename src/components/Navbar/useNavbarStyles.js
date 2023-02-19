@@ -5,7 +5,7 @@ const NAVBAR_HEIGHT = "160px";
 export const useNavbarStyles = createStyles((theme, { scrollPosition }) => ({
   root: {
     position: "fixed",
-    zIndex: 1,
+    zIndex: 1000,
     height: NAVBAR_HEIGHT,
     transition: "background-color 0.2s ease",
 

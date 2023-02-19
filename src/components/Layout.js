@@ -1,15 +1,15 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { MantineProvider } from "@mantine/core";
-import Footer from "../components/Footer";
+import Footer from "../containers/Footer";
 import { Navbar } from "./Navbar";
 import { MobileMenu } from "./MobileMenu";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
-import { Link, withPrefix } from "gatsby";
+import { withPrefix } from "gatsby";
 import themeConfig from "./themeConfig";
 import { useState } from "react";
-import GlobalStyles from "./GlobalStyles";
+import { GlobalStyles } from "./GlobalStyles";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -66,7 +66,7 @@ const TemplateWrapper = ({ children }) => {
         <MobileMenu isOpened={isActive} onClose={toggleMobileMenu} />
         <Navbar onBurgerClick={toggleMobileMenu} />
         {children}
-        {/*<Footer />*/}
+        <Footer />
       </MantineProvider>
     </div>
   );

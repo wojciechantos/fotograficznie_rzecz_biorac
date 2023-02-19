@@ -4,10 +4,10 @@ import { Heading, Text } from "../Typography";
 import { MoreButton } from "../Buttons";
 import { Flex } from "@mantine/core";
 import { useStyles } from "./useStyles";
-import { Link } from "gatsby";
 
 export const EpisodeFrame = ({
   image,
+  withBlogFrame,
   size,
   link,
   caption,
@@ -15,30 +15,32 @@ export const EpisodeFrame = ({
   moreText,
 }) => {
   const {
-    classes: { fullFrameWrapper, frameWrapper, innerWrapper },
+    classes: { fullFrameWrapper, frameWrapper, innerWrapper, blogFrame },
+    cx,
   } = useStyles();
 
   return (
-    <Flex className={size === "fullWidth" ? fullFrameWrapper : frameWrapper}>
-      <Link to={link} style={{ width: "100%" }}>
-        <StaticImage
-          src="../../../static/img/indexPage/episodePhoto.png"
-          alt="episode"
-        />
+    <Flex
+      className={cx(size === "fullWidth" ? fullFrameWrapper : frameWrapper, {
+        [blogFrame]: withBlogFrame === true,
+      })}
+    >
+      <StaticImage
+        src="../../../static/img/indexPage/episodePhoto.png"
+        alt="episode"
+      />
+      <Flex className={innerWrapper}>
+        <Text variant="caption" color="white">
+          {caption}
+        </Text>
 
-        <Flex className={innerWrapper}>
-          <Text variant="caption" color="white">
-            {caption}
-          </Text>
-
-          <Flex direction="column">
-            <Heading level={3} color="white" pb="xs">
-              {title}
-            </Heading>
-            <MoreButton>{moreText}</MoreButton>
-          </Flex>
+        <Flex direction="column">
+          <Heading level={3} color="white" pb="xs">
+            {title}
+          </Heading>
+          <MoreButton>{moreText}</MoreButton>
         </Flex>
-      </Link>
+      </Flex>
     </Flex>
   );
 };

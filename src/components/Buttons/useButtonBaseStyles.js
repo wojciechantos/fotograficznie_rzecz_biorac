@@ -1,4 +1,3 @@
-import React from "react";
 import { createStyles } from "@mantine/core";
 
 export const useButtonBaseStyles = createStyles((theme) => ({

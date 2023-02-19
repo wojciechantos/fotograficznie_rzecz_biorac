@@ -1,7 +1,6 @@
 import { createStyles } from "@mantine/core";
-import { MoreButton } from "../Buttons";
 
-export const useStyles = createStyles((theme, _params, getRef) => ({
+export const useStyles = createStyles((theme) => ({
   fullFrameWrapper: {
     width: "100%",
     height: "515px",
@@ -14,13 +13,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
 
     "&:hover": {
       opacity: 0.6,
-      [`.${getRef("more")}`]: {
-        marginLeft: theme.spacing.sm,
-      },
-
-      [`.${getRef("icon")}`]: {
-        transform: "scale(1.25, 1)",
-      },
     },
 
     ".gatsby-image-wrapper": {
@@ -46,13 +38,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
 
     "&:hover": {
       opacity: 0.6,
-      [`.${getRef("more")}`]: {
-        marginLeft: theme.spacing.sm,
-      },
-
-      [`.${getRef("icon")}`]: {
-        transform: "scale(1.25, 1)",
-      },
     },
 
     ".gatsby-image-wrapper": {
@@ -70,5 +55,9 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "space-between",
+  },
+
+  blogFrame: {
+    borderRadius: `${theme.radius.xl}px ${theme.radius.xl}px 0px 0px`,
   },
 }));

@@ -7,7 +7,6 @@ import { Menu, Search } from "react-feather";
 import { Text } from "../Typography";
 import PropTypes from "prop-types";
 import { useWindowScroll } from "@mantine/hooks";
-import themeConfig from "../themeConfig";
 
 export const Navbar = ({ onBurgerClick }) => {
   const [scroll] = useWindowScroll();

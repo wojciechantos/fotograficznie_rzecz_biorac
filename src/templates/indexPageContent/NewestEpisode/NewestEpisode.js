@@ -1,5 +1,4 @@
 // noinspection GraphQLUnresolvedReference
-import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import { Heading } from "../../../components/Typography";
 import { SectionWrapper } from "../../../components/SectionWrapper";
@@ -7,14 +6,10 @@ import { PlatformButton } from "../../../components/Buttons";
 import { EpisodeFrame } from "../../../components/EpisodeFrame";
 import { Flex } from "@mantine/core";
 import { indexPageData } from "../pageData";
-import { useMantineTheme } from "@mantine/core";
 import { useStyles } from "./useStyles";
 
 // eslint-disable-next-line
 export const NewestEpisode = () => {
-  const theme = useMantineTheme();
-  const minDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.md}px)`);
-
   const {
     newestEpisode: {
       heading,
@@ -26,12 +21,7 @@ export const NewestEpisode = () => {
   } = indexPageData;
 
   const {
-    classes: {
-      contentWrapper,
-      buttonsWrapper,
-      buttonsGroupWrapper,
-      episodeWrapper,
-    },
+    classes: { contentWrapper, buttonsWrapper, buttonsGroupWrapper },
   } = useStyles();
 
   return (
