@@ -5,15 +5,10 @@ import Layout from "../components/Layout";
 /*
  * Page sections import
  * */
-import {
-  HeroHeader,
-  NewestEpisode,
-  Episodes,
-  BestOf,
-  Blog,
-} from "../pages/IndexPageContent";
+import PageSections from "../pages/IndexPageContent";
+const { HeroHeader, NewestEpisode, Episodes, BestOf, Blog } = PageSections;
 
-export const IndexPageTemplate = () => {
+const IndexPageTemplate = () => {
   return (
     <>
       <PageContainer>
@@ -35,4 +30,6 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+const Modules = { IndexPage, IndexPageTemplate };
+
+export default Modules;

@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 
-export const useStyles = createStyles((theme) => ({
+const useStyles = createStyles((theme) => ({
   sectionWrapper: {
     height: "auto",
     overflow: "hidden",
@@ -66,3 +66,5 @@ export const useStyles = createStyles((theme) => ({
     zIndex: 3,
   },
 }));
+
+export default useStyles;

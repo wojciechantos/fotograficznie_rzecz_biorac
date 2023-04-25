@@ -5,11 +5,11 @@ import { SectionWrapper } from "../../../components/SectionWrapper";
 import { EpisodeFrame } from "../../../components/EpisodeFrame";
 import { MoreButton } from "../../../components/Buttons";
 import { Flex, SimpleGrid } from "@mantine/core";
-import { indexPageData } from "../pageData";
-import { useStyles } from "./useStyles";
+import indexPageData from "../pageData";
+import useStyles from "./useStyles";
 
 // eslint-disable-next-line
-export const Episodes = () => {
+const Episodes = () => {
   const episodesMock = [
     {
       id: 6,
@@ -81,3 +81,5 @@ export const Episodes = () => {
     </SectionWrapper>
   );
 };
+
+export default Episodes;

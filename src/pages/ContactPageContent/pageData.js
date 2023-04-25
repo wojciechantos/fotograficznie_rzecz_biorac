@@ -1,4 +1,4 @@
-export const contactPageData = {
+const contactPageData = {
   pageTitle: "Kontakt",
   header: "Bądźmy w kontakcie",
   text1: "Masz pomysł na gościa podcastu?",
@@ -15,3 +15,5 @@ export const contactPageData = {
     submitButton: "Wyślij",
   },
 };
+
+export default contactPageData;

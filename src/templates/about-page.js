@@ -1,5 +1,5 @@
 import React from "react";
-import { pageData } from "../pages/AboutPageContent/pageData";
+import pageData from "../pages/AboutPageContent/pageData";
 import { PageContainer } from "../components/PageContainer";
 import { SubpageHeader } from "../components/SubpageHeader";
 
