@@ -7,13 +7,13 @@ import { fontColorsMap } from "./fontColorsMap";
 const useStyles = createStyles((theme) => ({
   h1: {
     fontFamily: "Lora",
-    fontSize: "60px",
-    lineHeight: "58.8px",
+    fontSize: "46px",
+    lineHeight: "55.2px",
     fontWeight: 400,
 
     [theme.fn.smallerThan("sm")]: {
-      fontSize: "48px",
-      lineHeight: "47px",
+      fontSize: "40px",
+      lineHeight: "48px",
     },
   },
   h2: {

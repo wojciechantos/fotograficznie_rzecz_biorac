@@ -27,5 +27,6 @@ export const indexPageData = {
   blog: {
     heading: "Blog",
     watchAllButton: "Zobacz wszystkie posty",
+    moreButtonLabel: "Czytaj więcej",
   },
 };

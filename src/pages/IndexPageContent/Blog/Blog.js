@@ -1,4 +1,3 @@
-// noinspection GraphQLUnresolvedReference
 import React from "react";
 import { Heading } from "../../../components/Typography";
 import { SectionWrapper } from "../../../components/SectionWrapper";
@@ -8,7 +7,6 @@ import { Flex, SimpleGrid } from "@mantine/core";
 import { indexPageData } from "../pageData";
 import { useStyles } from "./useStyles";
 
-// eslint-disable-next-line
 export const Blog = () => {
   const blogsMock = [
     {
@@ -26,7 +24,7 @@ export const Blog = () => {
   ];
 
   const {
-    blog: { heading, watchAllButton },
+    blog: { heading, watchAllButton, moreButtonLabel },
   } = indexPageData;
 
   const {
@@ -35,8 +33,8 @@ export const Blog = () => {
 
   return (
     <SectionWrapper>
-      <Flex className={contentWrapper} px="md" py={32}>
-        <Heading level={2} color="brand" mb={32} ta="center">
+      <Flex className={contentWrapper} px="md" py={64}>
+        <Heading level={2} color="brand" mb={56} ta="center">
           {heading}
         </Heading>
 
@@ -53,7 +51,7 @@ export const Blog = () => {
             <EpisodeFrame
               key={episode.id}
               title={episode.title}
-              moreText="Czytaj więcej"
+              moreText={moreButtonLabel}
               withBlogFrame
             />
           ))}

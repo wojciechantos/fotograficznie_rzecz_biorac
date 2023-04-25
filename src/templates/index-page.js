@@ -11,7 +11,7 @@ import {
   Episodes,
   BestOf,
   Blog,
-} from "../templates/indexPageContent";
+} from "../pages/IndexPageContent";
 
 export const IndexPageTemplate = () => {
   return (

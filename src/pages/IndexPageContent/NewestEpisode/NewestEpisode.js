@@ -33,9 +33,7 @@ export const NewestEpisode = () => {
         <Flex className={buttonsGroupWrapper} gap="xl" mb={96}>
           <Flex className={buttonsWrapper} gap="xl">
             <PlatformButton>{appleButton}</PlatformButton>
-            <PlatformButton link="https://open.spotify.com/show/2vHPUNoBRp4jY4jsSYriH8">
-              {spotifyButton}
-            </PlatformButton>
+            <PlatformButton>{spotifyButton}</PlatformButton>
           </Flex>
           <Flex className={buttonsWrapper} gap="xl">
             <PlatformButton>{googleButton}</PlatformButton>

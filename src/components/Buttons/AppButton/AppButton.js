@@ -33,15 +33,24 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: theme.colors.creamy[2],
     },
   },
+
+  large: {
+    paddingLeft: "60px",
+    paddingRight: "60px",
+  },
+
+  fullWidth: {
+    width: "100%",
+  },
 }));
 
-export const AppButton = ({ children, variant, ...rest }) => {
+export const AppButton = ({ children, variant, size, ...rest }) => {
   const { classes, cx } = useStyles();
   const { classes: buttonBaseClasses } = useButtonBaseStyles();
 
   return (
     <UnstyledButton
-      className={cx(buttonBaseClasses.root, classes[variant])}
+      className={cx(buttonBaseClasses.root, classes[variant], classes[size])}
       {...rest}
     >
       {children}
@@ -51,10 +60,12 @@ export const AppButton = ({ children, variant, ...rest }) => {
 
 AppButton.propTypes = {
   variant: PropTypes.string,
+  size: PropTypes.oneOf(["standard", "large", "fullWidth"]),
   children: ChildrenType,
 };
 
 AppButton.defaultProps = {
   variant: "primary",
+  size: "standard",
   children: "",
 };

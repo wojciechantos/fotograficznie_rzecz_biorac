@@ -1,34 +1,19 @@
-// noinspection GraphQLUnresolvedReference
-import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Display, Heading, Text } from "../../../components/Typography";
 import { SectionWrapper } from "../../../components/SectionWrapper";
-import { AppButton } from "../../../components/Buttons";
+import { MoreButton } from "../../../components/Buttons";
 import { Flex } from "@mantine/core";
 import { indexPageData } from "../pageData";
-// import { useMantineTheme } from "@mantine/core";
-// import { HeroBgFigure } from "../../../../static/img/indexPage";
 import { useStyles } from "./useStyles";
 
-// eslint-disable-next-line
 export const BestOf = () => {
-  // const theme = useMantineTheme();
-  // const minTablet = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
-
   const {
     bestOf: { quote, author, moreButton },
   } = indexPageData;
 
   const {
-    classes: {
-      sectionWrapper,
-      backgroundWrapper,
-      bgFigure,
-      heroWrapper,
-      headersWrapper,
-      imageMobileWrapper,
-    },
+    classes: { sectionWrapper, backgroundWrapper, headersWrapper },
   } = useStyles();
 
   return (
@@ -47,7 +32,7 @@ export const BestOf = () => {
           {quote}
         </Display>
 
-        {/*  <AppButton>{heroButton}</AppButton>*/}
+        <MoreButton variant="dark">{moreButton}</MoreButton>
       </Flex>
     </SectionWrapper>
   );

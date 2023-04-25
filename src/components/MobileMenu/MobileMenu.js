@@ -21,17 +21,17 @@ export const MobileMenu = ({ isOpened, onClose }) => {
           Szymon
         </Display>
       </Link>
-      <Link className={classes.link} to="/about">
+      <Link className={classes.link} to="/podcasts">
         <Display italic align="center">
           Podcasty
         </Display>
       </Link>
-      <Link className={classes.link} to="/about">
+      <Link className={classes.link} to="/blog">
         <Display italic align="center">
           Blog
         </Display>
       </Link>
-      <Link className={classes.link} to="/about">
+      <Link className={classes.link} to="/contact">
         <Display italic align="center">
           Kontakt
         </Display>

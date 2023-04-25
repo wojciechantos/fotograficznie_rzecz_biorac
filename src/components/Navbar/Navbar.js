@@ -18,13 +18,13 @@ export const Navbar = ({ onBurgerClick }) => {
       <Link className={classes.link} to="/about">
         <Text variant="button">Szymon</Text>
       </Link>
-      <Link className={classes.link} to="/about">
+      <Link className={classes.link} to="/podcasts">
         <Text variant="button">Podcasty</Text>
       </Link>
-      <Link className={classes.link} to="/about">
+      <Link className={classes.link} to="/blog">
         <Text variant="button">Blog</Text>
       </Link>
-      <Link className={classes.link} to="/about">
+      <Link className={classes.link} to="/contact">
         <Text variant="button">Kontakt</Text>
       </Link>
       <Link className={classes.link} to="/">

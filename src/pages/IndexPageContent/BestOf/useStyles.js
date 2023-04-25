@@ -30,30 +30,4 @@ export const useStyles = createStyles((theme) => ({
     position: "relative",
     zIndex: 2,
   },
-  //
-  // headersWrapper: {
-  //   width: "100%",
-  //   alignItems: "left",
-  //   flexDirection: "column",
-  //   justifyContent: "center",
-  //   height: "100vh",
-  //
-  //   [theme.fn.largerThan("sm")]: {
-  //     width: "80%",
-  //   },
-  //
-  //   [theme.fn.largerThan("md")]: {
-  //     width: "100%",
-  //     paddingRight: theme.spacing.xl,
-  //     paddingBottom: 0,
-  //     justifyContent: "space-between",
-  //     height: "auto",
-  //     alignItems: "flex-start",
-  //   },
-  // },
-  //
-  // imageMobileWrapper: {
-  //   position: "relative",
-  //   zIndex: 3,
-  // },
 }));
