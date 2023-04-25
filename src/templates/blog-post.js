@@ -6,7 +6,6 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-// eslint-disable-next-line
 export const BlogPostTemplate = ({
   content,
   contentComponent,
