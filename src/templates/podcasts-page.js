@@ -1,18 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+// import PropTypes from "prop-types";
+// import { graphql } from "gatsby";
+// import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import FullWidthImage from "../components/FullWidthImage";
+// import Features from "../components/Features";
+// import Testimonials from "../components/Testimonials";
+// import Pricing from "../components/Pricing";
+// import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+// import FullWidthImage from "../components/FullWidthImage";
 
 import { PageContainer } from "../components/PageContainer";
 import { SubpageHeader } from "../components/SubpageHeader";
 
-export const PodcastsPageTemplate = () => {
+const PodcastsPageTemplate = () => {
   return (
     <>
       <PageContainer>
@@ -30,7 +30,9 @@ const PodcastsPage = () => {
   );
 };
 
-export default PodcastsPage;
+const Modules = { PodcastsPage, PodcastsPageTemplate };
+
+export default Modules;
 
 // export const productPageQuery = graphql`
 //   query ProductPage($id: String!) {

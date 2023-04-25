@@ -5,11 +5,11 @@ import { SectionWrapper } from "../../../components/SectionWrapper";
 import { PlatformButton } from "../../../components/Buttons";
 import { EpisodeFrame } from "../../../components/EpisodeFrame";
 import { Flex } from "@mantine/core";
-import { indexPageData } from "../pageData";
-import { useStyles } from "./useStyles";
+import indexPageData from "../pageData";
+import useStyles from "./useStyles";
 
 // eslint-disable-next-line
-export const NewestEpisode = () => {
+const NewestEpisode = () => {
   const {
     newestEpisode: {
       heading,
@@ -50,3 +50,5 @@ export const NewestEpisode = () => {
     </SectionWrapper>
   );
 };
+
+export default NewestEpisode;
