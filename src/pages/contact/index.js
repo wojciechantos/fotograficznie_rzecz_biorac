@@ -7,7 +7,7 @@ import { AppButton } from "../../components/Buttons";
 import { Flex } from "@mantine/core";
 import { ContactSection } from "../../containers/Contact";
 import { Text } from "../../components/Typography";
-import contactPageData from "../ContactPageContent/pageData";
+import { contactPageData } from "../ContactPageContent/pageData";
 
 function encode(data) {
   return Object.keys(data)

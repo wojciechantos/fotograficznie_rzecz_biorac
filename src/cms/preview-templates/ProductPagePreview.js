@@ -1,7 +1,6 @@
 import React from "react";
-import Modules from "../../templates/podcasts-page";
-
-const { PodcastsPageTemplate } = Modules;
+import PropTypes from "prop-types";
+import { PodcastsPageTemplate } from "../../templates/podcasts-page";
 
 const PodcastsPagePreview = ({ entry, getAsset }) => {
   // const entryBlurbs = entry.getIn(["data", "intro", "blurbs"]);

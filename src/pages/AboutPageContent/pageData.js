@@ -1,5 +1,3 @@
-const pageData = {
+export const pageData = {
   header: "Szymon",
 };
-
-export default pageData;

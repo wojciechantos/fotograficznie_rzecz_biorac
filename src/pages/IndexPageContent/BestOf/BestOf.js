@@ -1,13 +1,13 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Display, Text } from "../../../components/Typography";
+import { Display, Heading, Text } from "../../../components/Typography";
 import { SectionWrapper } from "../../../components/SectionWrapper";
 import { MoreButton } from "../../../components/Buttons";
 import { Flex } from "@mantine/core";
-import indexPageData from "../pageData";
-import useStyles from "./useStyles";
+import { indexPageData } from "../pageData";
+import { useStyles } from "./useStyles";
 
-const BestOf = () => {
+export const BestOf = () => {
   const {
     bestOf: { quote, author, moreButton },
   } = indexPageData;
@@ -37,5 +37,3 @@ const BestOf = () => {
     </SectionWrapper>
   );
 };
-
-export default BestOf;

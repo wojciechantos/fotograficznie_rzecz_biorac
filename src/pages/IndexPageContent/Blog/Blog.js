@@ -4,10 +4,10 @@ import { SectionWrapper } from "../../../components/SectionWrapper";
 import { EpisodeFrame } from "../../../components/EpisodeFrame";
 import { MoreButton } from "../../../components/Buttons";
 import { Flex, SimpleGrid } from "@mantine/core";
-import indexPageData from "../pageData";
-import useStyles from "./useStyles";
+import { indexPageData } from "../pageData";
+import { useStyles } from "./useStyles";
 
-const Blog = () => {
+export const Blog = () => {
   const blogsMock = [
     {
       id: 3,
@@ -66,5 +66,3 @@ const Blog = () => {
     </SectionWrapper>
   );
 };
-
-export default Blog;
