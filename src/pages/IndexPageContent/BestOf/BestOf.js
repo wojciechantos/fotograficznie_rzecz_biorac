@@ -19,10 +19,7 @@ export const BestOf = () => {
   return (
     <SectionWrapper className={sectionWrapper}>
       <Flex className={backgroundWrapper}>
-        <StaticImage
-          alt="best-of-image"
-          src="../../static/img/indexPage/heroImage.png"
-        />
+        <StaticImage alt="best-of-image" src="../../../img/heroImage.png" />
       </Flex>
       <Flex className={headersWrapper} px="md">
         <Text color="brand" mb={32} variant="caption">

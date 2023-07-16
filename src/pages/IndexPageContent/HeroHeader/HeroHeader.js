@@ -49,7 +49,7 @@ export const HeroHeader = () => {
         {minTablet && (
           <StaticImage
             alt="hero-image"
-            src="../../static/img/indexPage/heroImage.png"
+            src="../../../img/heroImage.png"
             style={{ width: "100%" }}
           />
         )}
@@ -57,7 +57,7 @@ export const HeroHeader = () => {
           <Flex className={imageMobileWrapper}>
             <StaticImage
               alt="hero-image"
-              src="../../static/img/indexPage/m_heroImage.png"
+              src="../../../img/m_heroImage.png"
               style={{
                 width: "100vw",
               }}
