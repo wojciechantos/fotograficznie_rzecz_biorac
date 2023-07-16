@@ -6,13 +6,13 @@ import { Display, Heading, Text } from "../../../components/Typography";
 import { SectionWrapper } from "../../../components/SectionWrapper";
 import { AppButton } from "../../../components/Buttons";
 import { Flex } from "@mantine/core";
-import indexPageData from "../pageData";
+import { indexPageData } from "../pageData";
 import { useMantineTheme } from "@mantine/core";
 import { HeroBgFigure } from "../../../../static/img/indexPage";
-import useStyles from "./useStyles";
+import { useStyles } from "./useStyles";
 
 // eslint-disable-next-line
-const HeroHeader = () => {
+export const HeroHeader = () => {
   const theme = useMantineTheme();
   const minTablet = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
 
@@ -68,5 +68,3 @@ const HeroHeader = () => {
     </SectionWrapper>
   );
 };
-
-export default HeroHeader;

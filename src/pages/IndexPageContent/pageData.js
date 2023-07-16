@@ -1,4 +1,4 @@
-const indexPageData = {
+export const indexPageData = {
   heroHeader: {
     display: "Najlepsi fotografowie w Twoich głośnikach",
     heading:
@@ -30,5 +30,3 @@ const indexPageData = {
     moreButtonLabel: "Czytaj więcej",
   },
 };
-
-export default indexPageData;

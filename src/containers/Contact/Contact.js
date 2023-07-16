@@ -2,7 +2,7 @@ import React from "react";
 import { useContactStyles } from "./useStyles";
 import { Box, Flex } from "@mantine/core";
 import { Heading, Text } from "../../components/Typography";
-import contactPageData from "../../pages/ContactPageContent/pageData";
+import { contactPageData } from "../../pages/ContactPageContent/pageData";
 import PropTypes from "prop-types";
 
 export const ContactSection = ({ children }) => {

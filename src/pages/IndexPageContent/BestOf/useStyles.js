@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 
-const useStyles = createStyles((theme) => ({
+export const useStyles = createStyles((theme) => ({
   sectionWrapper: {
     height: "91vh",
     position: "relative",
@@ -31,5 +31,3 @@ const useStyles = createStyles((theme) => ({
     zIndex: 2,
   },
 }));
-
-export default useStyles;
